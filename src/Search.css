@@ -1,0 +1,16 @@
+.Search{
+    width: 80%;
+}
+
+.form-search{
+    width: 30%;
+    background-color:rgba(255,255,255,0.07);
+}
+input::placeholder{
+    color:white ;
+}
+.form-submit{
+    width: 10%;
+    background-color:rgba(255,255,255,0.07);
+    color: white;
+}
