@@ -35,27 +35,27 @@ export default function Search() {
           </div>
         </div>
         <div className="row justify-content-evenly weather-properties text-center">
-          <div className="col-sm-2">
+          <div className="col-lg-2 col-md-4 ">
             Air quality <br /> 94
           </div>
-          <div className="col-sm-2">
+          <div className="col-lg-2 col-md-4 ">
             Wind <br /> 8km/h
           </div>
-          <div className="col-sm-2">
+          <div className="col-lg-2 col-md-4 ">
             Humidity
             <br /> 63%
           </div>
-          <div className="col-sm-2">
+          <div className="col-lg-2 col-md-4 ">
             Visibility
             <br />
             12km
           </div>
-          <div className="col-sm-2">
+          <div className="col-lg-2 col-md-4 ">
             Pressure
             <br />
             1010mb
           </div>
-          <div className="col-sm-2">
+          <div className="col-lg-2 col-md-4  ">
             Dev point
             <br />
             12°

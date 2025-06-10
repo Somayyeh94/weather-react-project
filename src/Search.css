@@ -1,44 +1,54 @@
-:root{
-    --background_color:rgba(255,255,255,0.07);
+:root {
+  --background_color: rgba(255, 255, 255, 0.07);
 }
 
-
-.Search{
-    margin: 20px auto;
-    width: 60%;
-
+.Search {
+  margin: 20px auto;
+  width: 60%;
 }
 
-.form-search{
-    width: 40%;
-    background-color:var( --background_color);
+.form-search {
+  width: 40%;
+  background-color: var(--background_color);
 }
-input::placeholder{
-    color:white ;
+input::placeholder {
+  color: white;
 }
-.form-submit{
-    width: 20%;
-    background-color:var( --background_color);
-    color: white;
+.form-submit {
+  width: 20%;
+  background-color: var(--background_color);
+  color: white;
 }
-.weather-data{
-    background-color:var( --background_color);  
+.weather-data {
+  background-color: var(--background_color);
 }
-.current-text{
-    padding: 0;
-    margin: 0;
+.current-text {
+  padding: 0;
+  margin: 0;
 }
- .temperature-value{
-    font-size: 64px;
-    line-height: 62px;
-    font-weight: 600;
+.temperature-value {
+  font-size: 64px;
+  line-height: 62px;
+  font-weight: 600;
 }
-.temperaure-unit{
-    font-size: 36px;
-    position: relative;
-    bottom: 20px;
+.temperaure-unit {
+  font-size: 36px;
+  position: relative;
+  bottom: 20px;
 }
-.current-icon{
-    position: relative;
-    bottom: 15px;
+.current-icon {
+  position: relative;
+  bottom: 15px;
+}
+@media (max-width: 960px) {
+  .Search {
+    width: 90%;
+
+  }
+  .form-search {
+    width: 55%;
+  }
+  .form-submit {
+    width: 25%;
+}
 }
