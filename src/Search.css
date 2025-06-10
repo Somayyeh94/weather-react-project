@@ -1,16 +1,22 @@
+:root{
+    --background_color:rgba(255,255,255,0.07);
+}
+
+
 .Search{
+    margin: 0 auto;
     width: 80%;
 }
 
 .form-search{
     width: 30%;
-    background-color:rgba(255,255,255,0.07);
+    background-color:var( --background_color);
 }
 input::placeholder{
     color:white ;
 }
 .form-submit{
     width: 10%;
-    background-color:rgba(255,255,255,0.07);
+    background-color:var( --background_color);
     color: white;
 }
