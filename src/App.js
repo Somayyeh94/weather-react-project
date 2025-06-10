@@ -5,10 +5,10 @@ import Search from "./Search";
 function App() {
   return (
     <div className="App">
-      <h1>Weather application</h1>
+  
      <Search/>
-      <footer className="text-white">
-        This projedt was coded by Somayyeh Seyedi and it is open-sourced on{" "}
+      <footer className="text-white text-center">
+        This project was coded by Somayyeh Seyedi and it is open-sourced on{" "}
         <a
           href="https://github.com/Somayyeh94/weather-react-project"
           target="_blank"
