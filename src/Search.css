@@ -19,11 +19,15 @@ input::placeholder {
   background-color: var(--background_color);
   color: white;
 }
+.location{
+  font-size: 20px;
+
+}
 .weather-data {
   background-color: var(--background_color);
 }
 .weather-data p{
-  font-size: 14px;
+  font-size: 16px;
 }
 .current-text {
   padding: 0;

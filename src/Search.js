@@ -1,5 +1,6 @@
 import react from "react";
 import "./Search.css";
+import logo from"./pin-48.svg"
 export default function Search() {
   return (
     <div className="Search container">
@@ -15,7 +16,8 @@ export default function Search() {
           className="form-submit border border-2 rounded-2 ms-2 p-1 fw-bold"
         />
       </form>
-      <div className="weather-data m-3 rounded-3 text-white p-2">
+      <div className="location ms-3 text-white mt-4 ps-3 fs-4"><img src={logo} alt="location-icon" width="20px" className="pb-2"/> Mashhad, Iran</div>
+      <div className="weather-data m-3 mt-1 rounded-3 text-white p-2">
         <p className="current-text">Current weather</p>
         <p className="date">wendsday, 23:05</p>
         <div className="current-data d-flex justify-content-center">
