@@ -1,15 +1,24 @@
 body {
-  margin: 0;
-  font-family:Segoe UI,Segoe WP,Arial,Sans-Serif
-    sans-serif;
+  font-family: Segoe UI, Segoe WP, Arial, Sans-Serif sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(180deg, #203580 0px, #443E73 60px, #443A66 300px, #27284F 600px, #171E44 1000px);
+  background: linear-gradient(
+    180deg,
+    #203580 0px,
+    #443e73 60px,
+    #443a66 300px,
+    #27284f 600px,
+    #171e44 1000px
+  );
+  /* background: linear-gradient(0deg, rgb(247, 247, 247) 23.8%, rgb(252, 221, 221) 92%); */
   background-repeat: no-repeat;
   background-size: cover;
 }
+html, body {
+  height: 100%;
+}
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

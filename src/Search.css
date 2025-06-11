@@ -34,12 +34,12 @@ input::placeholder {
   margin: 0;
 }
 .temperature-value {
-  font-size: 64px;
+  font-size: 76px;
   line-height: 62px;
   font-weight: 600;
 }
 .temperaure-unit {
-  font-size: 36px;
+  font-size: 46px;
   position: relative;
   bottom: 20px;
 }

@@ -5,7 +5,7 @@ import Search from "./Search";
 function App() {
   return (
     <div className="App">
-  
+  <a href="#" className="btn text-white">Theme</a>
      <Search/>
       <footer className="text-white text-center">
         This project was coded by Somayyeh Seyedi and it is open-sourced on{" "}
