@@ -85,15 +85,7 @@ input::placeholder {
     bottom: 5px;
     width: 20%;
   }
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    font-size: 10px;
-    grid-gap: 5px;
-  }
-  .grid-item {
-    border: 1px solid;
-    border-radius: 5px;
-  
-  }
+.weather-properties{
+  font-size: 12px;
+}
 }

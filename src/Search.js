@@ -72,31 +72,18 @@ export default function Search() {
           </div>
         </div>
         <div className="container-fluid">
-          <div className="row weather-properties text-center grid">
-            <div className=" col-lg-2 col-md-4 grid-item border rounded-2">
-              Air quality <br /> 94
-            </div>
-            <div className=" col-lg-2 col-md-4 grid-item border rounded-2">
+          <div className="row weather-properties text-center">
+            <div className=" col-4 border rounded-2">
               Wind <br /> {weather.wind}km/h
             </div>
-            <div className=" col-lg-2 col-md-4 grid-item border rounded-2">
+            <div className=" col-4 border rounded-2">
               Humidity
               <br /> {weather.humidity}%
             </div>
-            <div className="col-lg-2 col-md-4 grid-item border rounded-2">
-              Visibility
-              <br />
-              12km
-            </div>
-            <div className="col-lg-2 col-md-4 grid-item border rounded-2">
+            <div className="col-4 border rounded-2">
               Pressure
               <br />
               {weather.pressure}mb
-            </div>
-            <div className=" col-lg-2 col-md-4 grid-item border rounded-2 ">
-              Dev point
-              <br />
-              12°
             </div>
           </div>
         </div>
