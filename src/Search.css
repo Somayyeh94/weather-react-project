@@ -22,6 +22,9 @@ input::placeholder {
 .weather-data {
   background-color: var(--background_color);
 }
+.weather-data p{
+  font-size: 14px;
+}
 .current-text {
   padding: 0;
   margin: 0;
@@ -40,15 +43,48 @@ input::placeholder {
   position: relative;
   bottom: 15px;
 }
-@media (max-width: 960px) {
+@media (max-width: 763px) {
   .Search {
     width: 90%;
-
   }
   .form-search {
     width: 55%;
   }
   .form-submit {
     width: 25%;
-}
+  }
+  .weather-data p{
+    font-size: 10px;
+  }
+  .temperature-value {
+    font-size: 46px;
+    line-height: 42px;
+    font-weight: 400;
+  }
+  .temperaure-unit {
+    font-size: 20px;
+    position: relative;
+    bottom: 20px;
+  }
+  .current-condition {
+    font-size: 12px;
+    position: relative;
+    bottom: 10px;
+  }
+  .current-icon {
+    position: relative;
+    bottom: 5px;
+    width: 20%;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 10px;
+    grid-gap: 5px;
+  }
+  .grid-item {
+    border: 1px solid;
+    border-radius: 5px;
+  
+  }
 }

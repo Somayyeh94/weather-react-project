@@ -23,42 +23,45 @@ export default function Search() {
             <img
               src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
               alt="icon"
+              className="img-fluid"
             />
           </div>
           <div className="current-temperature">
             <span className="temperature-value">19</span>{" "}
             <span className="temperaure-unit ">°C</span>
           </div>
-          <div className="current-description pt-3 ps-4">
+          <div className="current-condition pt-3 ps-4">
             <div className="current-description fw-bold">Mostly cloudy</div>
             <div className="current-feel-like">Feels like 17°</div>
           </div>
         </div>
-        <div className="row justify-content-evenly weather-properties text-center">
-          <div className="col-lg-2 col-md-4 ">
-            Air quality <br /> 94
-          </div>
-          <div className="col-lg-2 col-md-4 ">
-            Wind <br /> 8km/h
-          </div>
-          <div className="col-lg-2 col-md-4 ">
-            Humidity
-            <br /> 63%
-          </div>
-          <div className="col-lg-2 col-md-4 ">
-            Visibility
-            <br />
-            12km
-          </div>
-          <div className="col-lg-2 col-md-4 ">
-            Pressure
-            <br />
-            1010mb
-          </div>
-          <div className="col-lg-2 col-md-4  ">
-            Dev point
-            <br />
-            12°
+        <div className="container-fluid">
+          <div className="row weather-properties text-center grid">
+            <div className=" col-lg-2 col-md-4 grid-item border rounded-2">
+              Air quality <br /> 94
+            </div>
+            <div className=" col-lg-2 col-md-4 grid-item border rounded-2">
+              Wind <br /> 8km/h
+            </div>
+            <div className=" col-lg-2 col-md-4 grid-item border rounded-2">
+              Humidity
+              <br /> 63%
+            </div>
+            <div className="col-lg-2 col-md-4 grid-item border rounded-2">
+              Visibility
+              <br />
+              12km
+            </div>
+            <div className="col-lg-2 col-md-4 grid-item border rounded-2">
+              Pressure
+              <br />
+              1010mb
+            </div>
+            <div className=" col-lg-2 col-md-4 grid-item border rounded-2 ">
+              Dev point
+              <br />
+              12°
+            </div>
           </div>
         </div>
       </div>
