@@ -11,8 +11,17 @@
   width: 40%;
   background-color: var(--background_color);
 }
+.unit-select, select{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
 input::placeholder {
   color: white;
+}
+input{
+  color:white;
 }
 .form-submit {
   width: 20%;
