@@ -3,6 +3,7 @@ import "./Search.css";
 import logo from "./pin-48.svg";
 import axios from "axios";
 import CorrectedTime from "./CorrectedTime";
+import WeatherIcon from "./WeatherIcon"
 
 export default function Search({ defaultCity }) {
   let [city, setCity] = useState(defaultCity);
@@ -25,7 +26,7 @@ export default function Search({ defaultCity }) {
         response.data.condition.description.substring(1),
       city: response.data.city,
       country: response.data.country,
-      icon: response.data.condition.icon_url,
+      icon: response.data.condition.icon,
       time: new Date(response.data.time * 1000),
     });
   }
@@ -63,7 +64,7 @@ export default function Search({ defaultCity }) {
           />
         </form>
         <div className="heading d-flex justify-content-between">
-          <div className="location ms-3 text-white mt-4 ps-1 ">
+          <div className="location ms-3 text-white mt-4 ps-1 fw-bold">
             <img src={logo} alt="location-icon" width="20px" className="pb-2" />{" "}
             {weather.city}, {weather.country}
           </div>
@@ -75,7 +76,7 @@ export default function Search({ defaultCity }) {
 
           <div className="current-data d-flex justify-content-center">
             <div className="current-icon  ">
-              <img src={weather.icon} alt="icon" className="img-fluid" />
+              <WeatherIcon code={weather.icon} />
             </div>
             <div className="current-temperature ">
               <span className="temperature-value">
