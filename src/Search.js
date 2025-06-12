@@ -2,15 +2,16 @@ import { useState } from "react";
 import "./Search.css";
 import logo from "./pin-48.svg";
 import axios from "axios";
+import Correctedtime from "./Correctedtime"
 
-
-
-export default function Search() {
+export default function Search({tempUnit}) {
   let [city, setCity] = useState("");
   let [weather, setWeather] = useState({});
+  console.log(tempUnit);
   function getWeatherData(response) {
-  console.log(response.data)
+    console.log(response.data);
     setWeather({
+      // temperature: { tempUnit="fahrenheit" ?  ((Math.round(response.data.temperature.current))-32)*5/9  :  Math.round(response.data.temperature.current) }
       temperature: Math.round(response.data.temperature.current),
       humidity: response.data.temperature.humidity,
       feels_like: Math.round(response.data.temperature.feels_like),
@@ -20,7 +21,7 @@ export default function Search() {
       city: response.data.city,
       country: response.data.country,
       icon: response.data.condition.icon_url,
-      time: response.data.time * 1000,
+      time: new Date(response.data.time * 1000),
     });
   }
 
@@ -52,17 +53,13 @@ export default function Search() {
           <img src={logo} alt="location-icon" width="20px" className="pb-2" />{" "}
           {weather.city}, {weather.country}
         </div>
-        <div className="unit-select">
-          <select>
-            <option>Select Unit</option>
-            <option>Celcius(°C)</option>
-            <option>Fahrenheint(°F)</option>
-          </select>
-        </div>
+       
       </div>
       <div className="weather-data rounded-3 text-white p-2">
         <p className="current-text">Current weather</p>
-        <p className="date">wendsday, 23:05</p>
+       
+        <Correctedtime current={weather.time}/>
+       
         <div className="current-data d-flex justify-content-center">
           <div className="current-icon  ">
             <img src={weather.icon} alt="icon" className="img-fluid" />
