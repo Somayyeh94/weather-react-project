@@ -6,6 +6,22 @@
   margin: 20px auto;
   width: 60%;
 }
+.selection{
+  margin-right:0;
+  display: flex;
+  justify-content: flex-end;
+}
+.unit-selection {
+  margin-bottom: 15px ;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 5px;
+  
+}
+option {
+  background-color: #4e498a;
+  color: white;
+}
 
 .form-search {
   width: 40%;

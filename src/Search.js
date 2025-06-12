@@ -4,14 +4,16 @@ import logo from "./pin-48.svg";
 import axios from "axios";
 import Correctedtime from "./Correctedtime"
 
-export default function Search({tempUnit}) {
+export default function Search() {
   let [city, setCity] = useState("");
   let [weather, setWeather] = useState({});
-  console.log(tempUnit);
+  let [unit, setUnit] = useState("celsius");
+  function showUnit(event) {
+    setUnit(event.target.value);
+  }
   function getWeatherData(response) {
     console.log(response.data);
     setWeather({
-      // temperature: { tempUnit="fahrenheit" ?  ((Math.round(response.data.temperature.current))-32)*5/9  :  Math.round(response.data.temperature.current) }
       temperature: Math.round(response.data.temperature.current),
       humidity: response.data.temperature.humidity,
       feels_like: Math.round(response.data.temperature.feels_like),
@@ -35,6 +37,12 @@ export default function Search({tempUnit}) {
   }
   return (
     <div className="Search container">
+      <div className="selection">
+        <select className="unit-selection rounded-2" onChange={showUnit}>
+          <option value="celsius">°C</option>
+          <option value="fahrenheit">°F</option>
+        </select>
+      </div>
       <form className="text-center" onSubmit={getApi}>
         <input
           type="search"
@@ -53,27 +61,36 @@ export default function Search({tempUnit}) {
           <img src={logo} alt="location-icon" width="20px" className="pb-2" />{" "}
           {weather.city}, {weather.country}
         </div>
-       
       </div>
       <div className="weather-data rounded-3 text-white p-2">
         <p className="current-text">Current weather</p>
-       
-        <Correctedtime current={weather.time}/>
-       
+
+        <Correctedtime current={weather.time} />
+
         <div className="current-data d-flex justify-content-center">
           <div className="current-icon  ">
             <img src={weather.icon} alt="icon" className="img-fluid" />
           </div>
           <div className="current-temperature ">
-            <span className="temperature-value">{weather.temperature}</span>{" "}
-            <span className="temperaure-unit ">°C</span>
+            <span className="temperature-value">
+              {unit === "fahrenheit"
+                ? Math.round((weather.temperature * 9) / 5 + 32)
+                : weather.temperature}
+            </span>{" "}
+            <span className="temperaure-unit ">
+              {" "}
+              {unit === "fahrenheit" ? "°F" : "°C"}
+            </span>
           </div>
           <div className="current-condition pt-3 ps-4">
             <div className="current-description fw-bold">
               {weather.description}
             </div>
             <div className="current-feel-like">
-              Feels like {weather.feels_like}°
+              Feels like{" "}
+              {unit === "fahrenheit"
+                ? Math.round((weather.feels_like * 9) / 5 + 32)
+                : weather.feels_like}°
             </div>
           </div>
         </div>
