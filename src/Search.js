@@ -123,6 +123,6 @@ export default function Search({ defaultCity }) {
     );
   } else {
     getApi();
-    return "";
+    return <h3 className="text-white text-center mt-5">Loading Weather Application...</h3>;
   }
 }
